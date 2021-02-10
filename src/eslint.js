@@ -36,7 +36,7 @@ function messageToAnnotation(file, message, prefix): Annotation {
 		title: message.ruleId,
 		annotation_level: noticeLevel(message.severity),
 		start_line: message.line,
-		end_line: message.endLine ?? message.line,
+		end_line: message.endLine ? message.endLine :  message.line,
 		path: file.filePath.slice(prefix.length),
 		raw_details: JSON.stringify(message, null, ' '),
 		message: message.message,
