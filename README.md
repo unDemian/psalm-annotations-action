@@ -30,5 +30,6 @@ jobs:
       uses: beaucollins/psalm-annotations-action@v1
       with:
         report_path: ./example/report.json
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 ```
